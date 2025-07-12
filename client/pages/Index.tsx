@@ -578,17 +578,26 @@ export default function Index() {
 
             <div className="grid md:grid-cols-2 gap-8">
               {skills.map((skill, index) => (
-                <div key={index} className="space-y-2">
+                <div
+                  key={index}
+                  className="space-y-2 animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
                   <div className="flex justify-between items-center">
                     <span className="font-medium">{skill.name}</span>
                     <span className="text-sm text-muted-foreground">
                       {skill.level}%
                     </span>
                   </div>
-                  <div className="w-full bg-muted rounded-full h-2">
+                  <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
                     <div
-                      className="bg-hero-gradient h-2 rounded-full transition-all duration-700"
-                      style={{ width: `${skill.level}%` }}
+                      className="bg-hero-gradient h-2 rounded-full skill-bar"
+                      style={
+                        {
+                          "--target-width": `${skill.level}%`,
+                          "--delay": `${index * 0.1 + 0.5}s`,
+                        } as React.CSSProperties
+                      }
                     ></div>
                   </div>
                   <span className="text-xs text-muted-foreground">
