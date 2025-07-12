@@ -25,6 +25,16 @@ import {
 import { Badge } from "@/components/ui/badge";
 
 export default function Index() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setMobileMenuOpen(false);
+    }
+  };
+
   const skills = [
     { name: "React.js", level: 95, category: "Frontend" },
     { name: "Redux", level: 90, category: "State Management" },
