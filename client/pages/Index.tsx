@@ -476,7 +476,11 @@ export default function Index() {
                 </h3>
                 <div className="space-y-8">
                   {education.map((edu, index) => (
-                    <Card key={index}>
+                    <Card
+                      key={index}
+                      className="hover-lift animate-slide-in-right"
+                      style={{ animationDelay: `${index * 0.2}s` }}
+                    >
                       <CardHeader>
                         <CardTitle className="text-xl">{edu.degree}</CardTitle>
                         <CardDescription className="text-primary font-medium">
