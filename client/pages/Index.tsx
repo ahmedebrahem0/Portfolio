@@ -249,20 +249,24 @@ export default function Index() {
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-hero-gradient p-1">
-                <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-hero-gradient p-1 animate-float">
+                <div className="w-full h-full rounded-full bg-background flex items-center justify-center hover-glow transition-all duration-300">
                   <span className="text-4xl font-bold text-primary">AE</span>
                 </div>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold mb-4">
-                <span className="bg-hero-gradient bg-clip-text text-transparent">
-                  Ahmed Ebrahem
-                </span>
+              <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-in">
+                <span className="gradient-text">Ahmed Ebrahem</span>
               </h1>
-              <h2 className="text-2xl md:text-3xl text-muted-foreground mb-6">
+              <h2
+                className="text-2xl md:text-3xl text-muted-foreground mb-6 animate-slide-up"
+                style={{ animationDelay: "0.2s" }}
+              >
                 Front-End Developer
               </h2>
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              <p
+                className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto animate-slide-up"
+                style={{ animationDelay: "0.4s" }}
+              >
                 Passionate about creating beautiful, responsive web applications
                 with modern technologies. Based in Cairo, Egypt, I specialize in
                 React.js, Redux, and building exceptional user experiences.
