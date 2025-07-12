@@ -36,18 +36,41 @@ export default function Index() {
     }
   };
 
-  const skills = [
-    { name: "React.js", level: 95, category: "Frontend" },
-    { name: "Redux", level: 90, category: "State Management" },
-    { name: "TypeScript", level: 88, category: "Language" },
-    { name: "Next.js", level: 85, category: "Framework" },
-    { name: "Tailwind CSS", level: 95, category: "Styling" },
-    { name: "JavaScript", level: 95, category: "Language" },
-    { name: "HTML/CSS", level: 98, category: "Frontend" },
-    { name: "Git", level: 90, category: "Tools" },
-    { name: "Responsive Design", level: 95, category: "UI/UX" },
-    { name: "API Integration", level: 88, category: "Backend" },
-  ];
+  const skillCategories = {
+    "Frontend Frameworks": [
+      { name: "React.js", level: 95, icon: "⚛️" },
+      { name: "Next.js", level: 85, icon: "🔥" },
+      { name: "Vue.js", level: 75, icon: "💚" },
+    ],
+    Languages: [
+      { name: "JavaScript", level: 95, icon: "🟨" },
+      { name: "TypeScript", level: 88, icon: "🔷" },
+      { name: "HTML", level: 98, icon: "🧱" },
+      { name: "CSS", level: 95, icon: "🎨" },
+    ],
+    "State Management": [
+      { name: "Redux Toolkit", level: 90, icon: "🗃️" },
+      { name: "Zustand", level: 85, icon: "🐻" },
+      { name: "Context API", level: 88, icon: "⚡" },
+    ],
+    "Styling & UI": [
+      { name: "Tailwind CSS", level: 95, icon: "💨" },
+      { name: "Styled Components", level: 80, icon: "💄" },
+      { name: "Material-UI", level: 85, icon: "📦" },
+      { name: "Responsive Design", level: 95, icon: "📱" },
+    ],
+    "Development Tools": [
+      { name: "Git & GitHub", level: 90, icon: "🔧" },
+      { name: "Vite", level: 88, icon: "⚡" },
+      { name: "Webpack", level: 75, icon: "📦" },
+      { name: "npm/yarn", level: 85, icon: "📦" },
+    ],
+    "Backend & APIs": [
+      { name: "REST APIs", level: 88, icon: "🔗" },
+      { name: "Node.js", level: 70, icon: "🟢" },
+      { name: "API Integration", level: 90, icon: "🔌" },
+    ],
+  };
 
   const projects = [
     {
