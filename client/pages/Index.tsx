@@ -265,7 +265,11 @@ export default function Index() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="gap-2">
+              <Button
+                size="lg"
+                className="gap-2"
+                onClick={() => scrollToSection("contact")}
+              >
                 <Mail className="w-5 h-5" />
                 Get In Touch
               </Button>
