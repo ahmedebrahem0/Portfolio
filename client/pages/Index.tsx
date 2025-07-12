@@ -621,9 +621,12 @@ export default function Index() {
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <Card>
+              <Card
+                className="hover-lift animate-scale-in"
+                style={{ animationDelay: "0.1s" }}
+              >
                 <CardContent className="p-6 text-center">
-                  <Mail className="w-8 h-8 mx-auto mb-4 text-primary" />
+                  <Mail className="w-8 h-8 mx-auto mb-4 text-primary animate-bounce-gentle" />
                   <h3 className="font-semibold mb-2">Email</h3>
                   <p className="text-muted-foreground">
                     ahmed.ebrahem.ebdelazem@gmail.com
@@ -631,9 +634,15 @@ export default function Index() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card
+                className="hover-lift animate-scale-in"
+                style={{ animationDelay: "0.2s" }}
+              >
                 <CardContent className="p-6 text-center">
-                  <Linkedin className="w-8 h-8 mx-auto mb-4 text-primary" />
+                  <Linkedin
+                    className="w-8 h-8 mx-auto mb-4 text-primary animate-bounce-gentle"
+                    style={{ animationDelay: "0.5s" }}
+                  />
                   <h3 className="font-semibold mb-2">LinkedIn</h3>
                   <p className="text-muted-foreground">
                     ahmed-ebrahem-421604235
@@ -641,9 +650,15 @@ export default function Index() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card
+                className="hover-lift animate-scale-in"
+                style={{ animationDelay: "0.3s" }}
+              >
                 <CardContent className="p-6 text-center">
-                  <Github className="w-8 h-8 mx-auto mb-4 text-primary" />
+                  <Github
+                    className="w-8 h-8 mx-auto mb-4 text-primary animate-bounce-gentle"
+                    style={{ animationDelay: "1s" }}
+                  />
                   <h3 className="font-semibold mb-2">GitHub</h3>
                   <p className="text-muted-foreground">ahmedebrahem0</p>
                 </CardContent>
