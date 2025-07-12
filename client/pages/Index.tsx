@@ -577,7 +577,16 @@ export default function Index() {
               </Card>
             </div>
 
-            <Button size="lg" className="gap-2">
+            <Button
+              size="lg"
+              className="gap-2"
+              onClick={() =>
+                window.open(
+                  "mailto:ahmed.ebrahem.ebdelazem@gmail.com",
+                  "_blank",
+                )
+              }
+            >
               <Mail className="w-5 h-5" />
               Send me a message
             </Button>
