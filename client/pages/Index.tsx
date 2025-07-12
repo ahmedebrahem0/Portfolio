@@ -142,7 +142,7 @@ export default function Index() {
             </button>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex items-center space-x-8">
               <button
                 onClick={() => scrollToSection("home")}
                 className="text-foreground hover:text-primary transition-colors"
@@ -179,6 +179,7 @@ export default function Index() {
               >
                 Contact
               </button>
+              <ThemeToggle />
             </div>
 
             {/* Mobile Menu Button */}
