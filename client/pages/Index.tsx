@@ -667,7 +667,8 @@ export default function Index() {
 
             <Button
               size="lg"
-              className="gap-2"
+              className="gap-2 hover-lift animate-scale-in"
+              style={{ animationDelay: "0.4s" }}
               onClick={() =>
                 window.open(
                   "mailto:ahmed.ebrahem.ebdelazem@gmail.com",
