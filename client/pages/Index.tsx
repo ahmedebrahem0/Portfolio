@@ -352,36 +352,57 @@ export default function Index() {
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-6">
-                <Card>
+                <Card
+                  className="hover-lift animate-scale-in"
+                  style={{ animationDelay: "0.1s" }}
+                >
                   <CardContent className="p-6 text-center">
-                    <Code className="w-8 h-8 mx-auto mb-2 text-primary" />
+                    <Code className="w-8 h-8 mx-auto mb-2 text-primary animate-bounce-gentle" />
                     <h4 className="font-semibold mb-1">Clean Code</h4>
                     <p className="text-sm text-muted-foreground">
                       Writing maintainable, readable code
                     </p>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card
+                  className="hover-lift animate-scale-in"
+                  style={{ animationDelay: "0.2s" }}
+                >
                   <CardContent className="p-6 text-center">
-                    <Smartphone className="w-8 h-8 mx-auto mb-2 text-primary" />
+                    <Smartphone
+                      className="w-8 h-8 mx-auto mb-2 text-primary animate-bounce-gentle"
+                      style={{ animationDelay: "0.5s" }}
+                    />
                     <h4 className="font-semibold mb-1">Responsive</h4>
                     <p className="text-sm text-muted-foreground">
                       Mobile-first design approach
                     </p>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card
+                  className="hover-lift animate-scale-in"
+                  style={{ animationDelay: "0.3s" }}
+                >
                   <CardContent className="p-6 text-center">
-                    <Globe className="w-8 h-8 mx-auto mb-2 text-primary" />
+                    <Globe
+                      className="w-8 h-8 mx-auto mb-2 text-primary animate-bounce-gentle"
+                      style={{ animationDelay: "1s" }}
+                    />
                     <h4 className="font-semibold mb-1">Modern Tech</h4>
                     <p className="text-sm text-muted-foreground">
                       Latest web technologies
                     </p>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card
+                  className="hover-lift animate-scale-in"
+                  style={{ animationDelay: "0.4s" }}
+                >
                   <CardContent className="p-6 text-center">
-                    <Users className="w-8 h-8 mx-auto mb-2 text-primary" />
+                    <Users
+                      className="w-8 h-8 mx-auto mb-2 text-primary animate-bounce-gentle"
+                      style={{ animationDelay: "1.5s" }}
+                    />
                     <h4 className="font-semibold mb-1">Collaboration</h4>
                     <p className="text-sm text-muted-foreground">
                       Team player mindset
