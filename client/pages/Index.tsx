@@ -273,27 +273,33 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-scale-in"
+              style={{ animationDelay: "0.6s" }}
+            >
               <Button
                 size="lg"
-                className="gap-2"
+                className="gap-2 hover-lift"
                 onClick={() => scrollToSection("contact")}
               >
                 <Mail className="w-5 h-5" />
                 Get In Touch
               </Button>
-              <Button variant="outline" size="lg" className="gap-2">
+              <Button variant="outline" size="lg" className="gap-2 hover-lift">
                 <Download className="w-5 h-5" />
                 Download Resume
               </Button>
             </div>
 
-            <div className="flex justify-center space-x-6">
+            <div
+              className="flex justify-center space-x-6 animate-fade-in"
+              style={{ animationDelay: "0.8s" }}
+            >
               <a
                 href="https://github.com/ahmedebrahem0"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-card hover:bg-accent transition-colors"
+                className="p-3 rounded-full bg-card hover:bg-accent transition-all duration-300 hover-lift hover-glow"
               >
                 <Github className="w-6 h-6" />
               </a>
@@ -301,13 +307,13 @@ export default function Index() {
                 href="https://linkedin.com/in/ahmed-ebrahem-421604235"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-card hover:bg-accent transition-colors"
+                className="p-3 rounded-full bg-card hover:bg-accent transition-all duration-300 hover-lift hover-glow"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
                 href="mailto:ahmed.ebrahem.ebdelazem@gmail.com"
-                className="p-3 rounded-full bg-card hover:bg-accent transition-colors"
+                className="p-3 rounded-full bg-card hover:bg-accent transition-all duration-300 hover-lift hover-glow"
               >
                 <Mail className="w-6 h-6" />
               </a>
