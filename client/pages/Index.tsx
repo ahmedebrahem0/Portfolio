@@ -432,7 +432,11 @@ export default function Index() {
                 </h3>
                 <div className="space-y-8">
                   {experiences.map((exp, index) => (
-                    <Card key={index}>
+                    <Card
+                      key={index}
+                      className="hover-lift animate-slide-in-left"
+                      style={{ animationDelay: `${index * 0.2}s` }}
+                    >
                       <CardHeader>
                         <CardTitle className="text-xl">{exp.title}</CardTitle>
                         <CardDescription className="text-primary font-medium">
@@ -448,7 +452,10 @@ export default function Index() {
                           {exp.achievements.map((achievement, i) => (
                             <li
                               key={i}
-                              className="flex items-start gap-2 text-sm"
+                              className="flex items-start gap-2 text-sm animate-fade-in"
+                              style={{
+                                animationDelay: `${index * 0.2 + i * 0.1 + 0.3}s`,
+                              }}
                             >
                               <Star className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                               {achievement}
