@@ -537,7 +537,7 @@ export default function Index() {
               {projects.map((project, index) => (
                 <Card
                   key={index}
-                  className={`hover-lift animate-scale-in ${project.featured ? "ring-2 ring-primary/20 hover-glow" : ""}`}
+                  className={`hover-lift animate-scale-in hover-glow ${project.featured ? "ring-2 ring-primary/20" : ""}`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CardHeader>
