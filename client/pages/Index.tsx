@@ -514,13 +514,19 @@ export default function Index() {
               {projects.map((project, index) => (
                 <Card
                   key={index}
-                  className={`${project.featured ? "ring-2 ring-primary/20" : ""}`}
+                  className={`hover-lift animate-scale-in ${project.featured ? "ring-2 ring-primary/20 hover-glow" : ""}`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <CardTitle className="text-xl">{project.title}</CardTitle>
                       {project.featured && (
-                        <Badge variant="default">Featured</Badge>
+                        <Badge
+                          variant="default"
+                          className="animate-bounce-gentle"
+                        >
+                          Featured
+                        </Badge>
                       )}
                     </div>
                     <CardDescription>{project.description}</CardDescription>
@@ -528,17 +534,28 @@ export default function Index() {
                   <CardContent>
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.technologies.map((tech, i) => (
-                        <Badge key={i} variant="outline">
+                        <Badge
+                          key={i}
+                          variant="outline"
+                          className="animate-fade-in"
+                          style={{
+                            animationDelay: `${index * 0.1 + i * 0.05}s`,
+                          }}
+                        >
                           {tech}
                         </Badge>
                       ))}
                     </div>
                     <div className="flex gap-4">
-                      <Button size="sm" className="gap-2">
+                      <Button size="sm" className="gap-2 hover-lift">
                         <ExternalLink className="w-4 h-4" />
                         Live Demo
                       </Button>
-                      <Button variant="outline" size="sm" className="gap-2">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="gap-2 hover-lift"
+                      >
                         <Github className="w-4 h-4" />
                         Source Code
                       </Button>
