@@ -133,48 +133,109 @@ export default function Index() {
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold bg-hero-gradient bg-clip-text text-transparent">
+            <button
+              onClick={() => scrollToSection("home")}
+              className="text-2xl font-bold bg-hero-gradient bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+            >
               Ahmed Ebrahem
-            </div>
+            </button>
+
+            {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
-              <a
-                href="#home"
+              <button
+                onClick={() => scrollToSection("home")}
                 className="text-foreground hover:text-primary transition-colors"
               >
                 Home
-              </a>
-              <a
-                href="#about"
+              </button>
+              <button
+                onClick={() => scrollToSection("about")}
                 className="text-foreground hover:text-primary transition-colors"
               >
                 About
-              </a>
-              <a
-                href="#experience"
+              </button>
+              <button
+                onClick={() => scrollToSection("experience")}
                 className="text-foreground hover:text-primary transition-colors"
               >
                 Experience
-              </a>
-              <a
-                href="#projects"
+              </button>
+              <button
+                onClick={() => scrollToSection("projects")}
                 className="text-foreground hover:text-primary transition-colors"
               >
                 Projects
-              </a>
-              <a
-                href="#skills"
+              </button>
+              <button
+                onClick={() => scrollToSection("skills")}
                 className="text-foreground hover:text-primary transition-colors"
               >
                 Skills
-              </a>
-              <a
-                href="#contact"
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
                 className="text-foreground hover:text-primary transition-colors"
               >
                 Contact
-              </a>
+              </button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors"
+            >
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
           </div>
+
+          {/* Mobile Navigation Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 border-t border-border pt-4">
+              <div className="flex flex-col space-y-4">
+                <button
+                  onClick={() => scrollToSection("home")}
+                  className="text-left text-foreground hover:text-primary transition-colors"
+                >
+                  Home
+                </button>
+                <button
+                  onClick={() => scrollToSection("about")}
+                  className="text-left text-foreground hover:text-primary transition-colors"
+                >
+                  About
+                </button>
+                <button
+                  onClick={() => scrollToSection("experience")}
+                  className="text-left text-foreground hover:text-primary transition-colors"
+                >
+                  Experience
+                </button>
+                <button
+                  onClick={() => scrollToSection("projects")}
+                  className="text-left text-foreground hover:text-primary transition-colors"
+                >
+                  Projects
+                </button>
+                <button
+                  onClick={() => scrollToSection("skills")}
+                  className="text-left text-foreground hover:text-primary transition-colors"
+                >
+                  Skills
+                </button>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="text-left text-foreground hover:text-primary transition-colors"
+                >
+                  Contact
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
